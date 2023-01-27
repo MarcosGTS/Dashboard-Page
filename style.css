@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +16,8 @@ body {
     grid-template-columns: 1fr 5fr;
     background-color: var(--light-color);
     color: var(--neutral-dark);
+
+    font-family: "Work Sans", Arial, Helvetica, sans-serif;
 }
 
 h1,
@@ -47,8 +51,14 @@ nav a {
 }
 
 nav a:hover {
+    color: #1e3a8a;
     transform: translateX(10px);
 }
+
+nav a:hover > .icon{
+    filter: invert(14%) sepia(37%) saturate(6021%) hue-rotate(222deg) brightness(91%) contrast(86%);
+} 
+
 
 nav .icon {
     margin-right: .8rem;
@@ -195,6 +205,9 @@ button:hover {
     height: var(--base-size);
 
     /* Setting base color*/
+
+    filter: invert(56%) sepia(14%) saturate(275%) hue-rotate(194deg) brightness(92%) contrast(77%);
+    transition: all 150ms ease-out; 
 }
 
 .icons-set {
