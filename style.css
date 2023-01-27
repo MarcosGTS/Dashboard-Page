@@ -2,22 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    --dark-color: #18181b;
+    --light-color: #fafafa;
+    --neutral-color: #d4d4d8;
+    --neutral-dark: #3f3f46;
 }
 
 body {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    background-color: #f5f5f5;
+    background-color: var(--light-color);
+    color: var(--neutral-dark);
 }
 
+h1,
+h2,
+h3 {
+    color: var(--dark-color);
+}
 
 header {
     height: 100%;
     padding: 1rem;
     min-width: 200px;
 
-    background-color: darkblue;
-    color: #f5f5f5;
+    background-color: var(--dark-color);
+    color: var(--light-color);
 }
 
 nav > ul {
@@ -51,8 +62,28 @@ nav .icon {
     grid-row-start: 1;
     grid-column: 1/-1;
 
-    background-color: #fff;
+    background-color: var(--neutral-color);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu img {
+    border-radius: 100px;
+}
+
+.search img {
+    width: 40px;
+    height: auto;
+}
+
+.resume img {
+    width: 60px;
+    height: auto;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .search,
@@ -60,17 +91,46 @@ nav .icon {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    padding: .3rem 0;
+}
+
+.search input[type="text"] {
+    height: 30px;
+    width: 30px;
+    padding: 0 1rem;
+    
+    border: none;
+    border-radius: 40px;
+
+    cursor: pointer;
+
+    transition: all 150ms ease-out;
+}
+
+.search input[type="text"]:focus,
+.search input[type="text"]:not(:placeholder-shown){
+    flex: 1;
 }
 
 button {
-    padding: 8px 20px;
+    width: 80px;
+    padding: 8px 10px;
 
     border:none;
-    border-radius: 20px;
+    border-radius: 6px;
 
-    color: #fff;
-    background-color: darkblue;
+    color: var(--dark-color);
+    border: 3px solid var(--dark-color);
+    background-color: rgba(0, 0, 0, 0);
     font-weight: bold;
+
+    transition: all 150ms ease-in;
+}
+
+button:hover {
+    color: var(--light-color);
+    background-color: var(--dark-color);
 }
 
 /* Content */
@@ -110,6 +170,8 @@ button {
 
     padding: 1rem;
     border-radius: 8px;
+
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .card > .text-box {
@@ -117,11 +179,11 @@ button {
 }
 
 .text-box {
-    color: gray;
+    color: var(--neutral-dark);
 }
 
 .text-box > h3 {
-    color: black;
+    color: var(--dark-color);
     font-weight: bold;
     margin-bottom: 0.5em;
 }
