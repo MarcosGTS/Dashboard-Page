@@ -1,0 +1,10 @@
+.account-icon {
+    background-image: url("./imgs/card-account-details.svg");
+    background-size: cover;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(86deg) brightness(106%) contrast(102%);
+}
+
+.account-icon {
+    background-image: url("./imgs/card-account-details.svg");
+    background-size: cover;
+}
