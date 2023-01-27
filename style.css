@@ -109,7 +109,16 @@ button {
 }
 
 .icon {
-    display:inline-block;
-    width: 20px;
-    height: 20px;
+    --base-size: 22px;
+
+    width: var(--base-size);
+    height: var(--base-size);
+}
+
+.icons-set {
+    margin-left: auto;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
