@@ -53,3 +53,8 @@
     background-size: cover;
 }
 
+.community-icon {
+    background-image: url("./imgs/account-group.svg");
+    background-size: cover;
+}
+
