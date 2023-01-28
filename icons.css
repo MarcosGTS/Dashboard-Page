@@ -58,3 +58,8 @@
     background-size: cover;
 }
 
+.logo-icon {
+    background-image: url("./imgs/dashboard.svg");
+    background-size: cover;
+}
+
